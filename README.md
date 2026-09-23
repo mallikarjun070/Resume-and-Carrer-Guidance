@@ -40,9 +40,9 @@ The platform solves a common problem in career development: users often have ski
 
 ---
 
-## 📸 Platform Screenshots
+## 📸 Career Guidance
 
-| Screenshot | Description |
+| HOME PAGE | Description |
 |---|---|
 | <img src="./home.png" alt="CareerPilotAI home page" width="400" /> | Main landing page and career guidance overview |
 | <img src="./dashboard_screenshot.png" alt="CareerPilotAI dashboard" width="400" /> | Personalized dashboard and career progress overview |
