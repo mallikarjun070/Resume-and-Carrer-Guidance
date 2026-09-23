@@ -44,7 +44,7 @@ The platform solves a common problem in career development: users often have ski
 
 | HOME PAGE | Description |
 |---|---|
-| <img src="./home.png" alt="CareerPilotAI home page" width="400" /> | Main landing page and career guidance overview |
+| <img src="./home.png" alt="CareerPilotAI home page" width="400" /> |The main landing page of CareerPilotAI, introducing the platform and helping students discover AI-powered career guidance, personalized career paths, skill development resources, and career preparation tools.|
 | <img src="./dashboard_screenshot.png" alt="CareerPilotAI dashboard" width="400" /> | Personalized dashboard and career progress overview |
 | <img src="./roadmaps_screenshot.png" alt="CareerPilotAI roadmap screen" width="400" /> | Career and skill roadmap exploration |
 
