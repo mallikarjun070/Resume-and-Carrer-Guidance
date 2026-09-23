@@ -1,134 +1,210 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Harishganth-0704/AI-Based-Smart-Career-Guidance-Recruitment-Platform/main/frontend/public/vite.svg" width="100" height="100" alt="CareerCraft Logo" />
-  
-  # 🚀 CareerCraft: AI-Powered Career Path Recommendation
-  
-  **The Ultimate AI Career Compass & B2B Recruitment Ecosystem**
-  
-  [![React](https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-  [![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-  [![Vite](https://img.shields.io/badge/Vite-7.0-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-  [![MongoDB](https://img.shields.io/badge/MongoDB-Ready-brightgreen?style=for-the-badge&logo=mongodb)](https://mongodb.com/)
-  [![Gemini AI](https://img.shields.io/badge/AI-Google_Gemini-orange?style=for-the-badge&logo=google)](https://ai.google.dev/)
-</div>
+# 🚀 CareerPilotAI
+### AI-Powered Career Guidance & Job Readiness Platform
 
-<br />
+CareerPilotAI is an AI-powered career guidance platform built to help students and job seekers understand their strengths, explore suitable tech paths, improve their skills, and prepare for real-world opportunities. It brings career assessment, roadmap guidance, resume review, interview support, and job-preparation tools into one focused experience.
 
-CareerCraft is an **AI-powered "Super App"** designed to bridge the gap between job seekers and recruiters. It acts as a comprehensive ecosystem that helps students, graduates, and career switchers explore tech roles, prepare for interviews, and build stunning portfolios—all while giving HR professionals a dedicated portal for smart candidate matchmaking.
-
-Built specifically to solve real-world career confusion through dynamic roadmaps and AI-driven gamification.
+The platform solves a common problem in career development: users often have skills and ambition, but not a clear path to make them visible to employers. CareerPilotAI helps turn uncertainty into direction by combining structured guidance with AI-powered analysis.
 
 ---
 
-## 📸 Platform Sneak Peek
+## ✨ Key Features
 
-<div align="center">
-  <img src="home_screenshot.png" width="800" alt="CareerCraft Home Page" style="border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
-  <br/>
-  <img src="dashboard_screenshot.png" width="390" alt="Dashboard" style="border-radius: 10px; margin-right: 10px;" />
-  <img src="roadmaps_screenshot.png" width="390" alt="Roadmaps" style="border-radius: 10px;" />
-</div>
+### 🎯 Career Guidance
+- AI-powered career recommendations based on skills and interests
+- Career path exploration across multiple technology roles
+- Assessment-based guidance for skill strengths and growth areas
+- Personalized learning and roadmap suggestions
+- Role and skill-based roadmap pages for technical learning tracks
 
----
+### 📄 Resume & Portfolio
+- Resume builder and resume review workflow
+- ATS-focused resume generation and improvement recommendations
+- Portfolio generation and public portfolio routes
+- AI-supported resume enhancement suggestions
+- Career target selection for role-specific content generation
 
-## ✨ Key Features (The Super App Ecosystem)
+### 🤖 AI Assistant
+- Career guidance chat assistant for user questions and next-step advice
+- AI-powered recommendations for career paths and role fit
+- Resume and study-plan generation based on user profile and goals
+- Interview preparation and answer feedback support
+- Salary insight, negotiation, and outreach assistance tools
 
-### 📚 For Students & Job Seekers
-*   **🧠 AI Career Assessment:** Get personalized career recommendations using Google Gemini AI.
-*   **🗺️ Interactive Roadmaps:** Step-by-step paths for Data Science, AI, Full Stack, Cybersecurity, etc., with dynamic progress tracking.
-*   **🏆 Gamified Experience:** Earn points, maintain streaks, and collect badges (`Newcomer 🎯`, `Fast Learner ⚡`) by completing learning modules.
-*   **📄 AI Resume Builder & ATS Generator:** Create stunning, ATS-friendly PDF resumes in seconds.
-*   **💼 1-Click Portfolio:** Instantly generate a live, beautifully designed portfolio website from your profile data.
-*   **🛠️ AI Career Toolbox:** 
-    *   **GitHub Analyzer:** Instant code quality checks and profile reviews.
-    *   **Video Resume Script Generator:** Perfect 60-second intro scripts.
-    *   **Salary Insight & Negotiation Simulator:** AI-powered market range checks and interactive HR negotiation practice.
-    *   **Networking Suite:** Draft professional LinkedIn outreach messages automatically.
-*   **🌍 100% Public Access:** No login required! The entire platform is open for guest users to explore seamlessly.
-*   **🔐 Secure Authentication:** JWT-based login, rate limiting, and an Email-based password recovery system.
-
-### 🏢 For HR & Recruiters (B2B Portal)
-*   **🔍 Smart Candidate Matchmaking:** Filter and find candidates based on verified skills and completed roadmaps.
-*   **📊 Analytics Dashboard:** Track candidate progress, test scores, and overall platform engagement.
-
----
-
-## 🚀 Tech Stack & Architecture
-
-| Layer | Technologies Used |
-| :--- | :--- |
-| **Frontend** | React 19, Vite 7, React Router 7, Vanilla CSS (Glassmorphism UI) |
-| **Backend** | Node.js, Express.js |
-| **Database** | MongoDB (Mongoose ORM) |
-| **AI Integration** | Google Gemini AI API (`gemini-2.5-flash`) |
-| **Security** | `bcryptjs`, `jsonwebtoken`, `helmet`, `express-rate-limit` |
-| **Utilities** | `nodemailer` (Emails), `python-pptx`, `reportlab` |
+### 💼 Job & Career Preparation
+- Job search and opportunities browsing
+- Mock interview flow with feedback support
+- Skill quiz and assessment-based learning reinforcement
+- Salary insight and negotiation simulator
+- Networking outreach generation for professional communication
+- Certificate, profile, and progress tracking experience
 
 ---
 
-## 🛠️ Quick Start Guide
+## 📸 Platform Screenshots
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- [MongoDB](https://www.mongodb.com/try/download/community) (Local instance or MongoDB Atlas URI)
-- A Google Gemini API Key
-- A Gmail App Password (for email features)
+| Screenshot | Description |
+|---|---|
+| <img src="./home.png" alt="CareerPilotAI home page" width="400" /> | Main landing page and career guidance overview |
+| <img src="./dashboard_screenshot.png" alt="CareerPilotAI dashboard" width="400" /> | Personalized dashboard and career progress overview |
+| <img src="./roadmaps_screenshot.png" alt="CareerPilotAI roadmap screen" width="400" /> | Career and skill roadmap exploration |
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/Harishganth-0704/AI-Based-Smart-Career-Guidance-Recruitment-Platform.git
-cd AI-Based-Smart-Career-Guidance-Recruitment-Platform
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, Vite, React Router |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| AI | Google Generative AI |
+| Authentication | JWT, bcryptjs |
+| API Communication | Axios |
+| Security | Helmet, CORS, express-rate-limit |
+| Email | Nodemailer |
+| Deployment | Vercel-ready frontend; Node/Express backend deployable on Render or similar hosting |
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+CareerPilotAI/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── package.json
+│   ├── server.js
+│   └── .env.example (if configured locally)
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   ├── index.jsx
+│   │   └── App.css
+│   ├── package.json
+│   ├── vite.config.js
+│   └── index.html
+├── docs/
+├── scratch/
+├── home.png
+├── dashboard_screenshot.png
+├── roadmaps_screenshot.png
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
-### 2️⃣ Backend Setup
+---
+
+## 🧩 Core Application Flow
+
+The application is split between a frontend React app and a Node/Express backend.
+
+- The frontend delivers the user experience for career discovery, roadmaps, resumes, interviews, jobs, and AI assistance.
+- The backend exposes career and auth APIs for recommendations, job data, resume analysis, interview flow, and user management.
+- MongoDB stores user and progress-related records, while Gemini powers the AI-generated guidance and recommendations.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- MongoDB running locally or via MongoDB Atlas
+- A Google Gemini API key
+- Optional: Gmail app password for email features
+
+### 1) Clone the repository
+```bash
+git clone <your-repository-url>
+cd CareerPilotAI
+```
+
+### 2) Backend setup
 ```bash
 cd backend
 npm install
 ```
-Create a `.env` file in the `backend/` directory:
+
+Create a `.env` file in the `backend` folder:
+
 ```env
 PORT=5001
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb://localhost:27017/careercraft
 GEMINI_API_KEY=your_gemini_api_key
-JWT_SECRET=your_jwt_super_secret_key
-FRONTEND_URL=http://localhost:5174
-EMAIL_USER=your_gmail@gmail.com
-EMAIL_PASS=your_16_char_gmail_app_password
-```
-Start the backend server:
-```bash
-npm run dev
-# Server will run at http://localhost:5001
+JWT_SECRET=your_jwt_secret
+FRONTEND_URL=http://localhost:5173
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_app_password
 ```
 
-### 3️⃣ Frontend Setup
-Open a new terminal window:
+Start the API server:
+
 ```bash
-cd frontend
-npm install
 npm run dev
 ```
-*Frontend will run at `http://localhost:5174` (or 5173)*
+
+### 3) Frontend setup
+```bash
+cd ../frontend
+npm install
+npm run dev -- --host 0.0.0.0
+```
+
+Open the app in the browser:
+
+```text
+http://localhost:5173/
+```
 
 ---
 
-## 📂 Project Structure
+## 📍 Key Features by Page
 
-```text
-AI-Based-Smart-Career-Guidance-Recruitment-Platform/
-├── backend/                  # Node.js & Express API
-│   ├── controllers/          # API Logic (Auth, Roadmap progress)
-│   ├── middleware/           # JWT Protection & Rate Limiters
-│   ├── models/               # MongoDB Schemas (User)
-│   ├── routes/               # API Endpoints
-│   └── server.js             # Entry Point
-├── frontend/                 # React UI
-│   ├── src/
-│   │   ├── components/       # Reusable UI (Navbar, Chatbot)
-│   │   ├── context/          # Global State (AuthContext)
-│   │   ├── pages/            # Dashboards, Roadmaps, AI Tools
-│   │   ├── services/         # Axios API Configuration
-│   │   └── App.jsx           # Main Router
-│   └── vite.config.js
-└── docs/                     # Auto-generated PPT & PDF Reports
-```
+The current project includes the following functional areas:
+
+- Home and career overview experience
+- Career assessment and recommendation flow
+- Role-based and skill-based roadmaps
+- Resume builder and ATS review tools
+- AI assistant and chat-driven guidance
+- Job search and job matching workflow
+- Mock interview support
+- Salary insight and negotiation simulator
+- Outreach generation and communication support
+- Portfolio and profile features
+- User authentication, progress tracking, and leaderboard support
+
+---
+
+## 📌 Notes
+
+This project is actively structured around career readiness and AI-assisted guidance for technical learning paths. It is designed for students, career switchers, and users who want a more focused, evidence-based path from exploration to job readiness.
+
+---
+
+## 👥 Contributing
+
+Contributions are welcome. If you want to improve the platform, you can:
+
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request with a clear description
+
+---
+
+## ✅ Project Status
+
+CareerPilotAI is a functional full-stack career guidance application with a React frontend, Node/Express backend, MongoDB data model, and AI-assisted career tooling for assessment, learning, resume, and interview preparation.
+
