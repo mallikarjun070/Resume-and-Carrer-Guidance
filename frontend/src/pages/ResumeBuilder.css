@@ -1,0 +1,621 @@
+/* src/pages/ResumeBuilder.css */
+
+.resume-builder-page {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  padding: 4rem 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume-builder-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.resume-builder-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.resume-builder-header p {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+}
+
+.resume-form {
+  background-color: var(--card-background);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.form-group select,
+.form-group input[type="text"] {
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-role-input input[type="text"] {
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+.custom-role-input input[type="text"]:focus {
+    border-color: var(--accent-primary);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.2);
+}
+
+.custom-role-input {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* --- STYLES for resume drop zone --- */
+.resume-drop-zone {
+    background-color: var(--background-dark);
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    cursor: pointer;
+}
+
+.resume-drop-zone.dragging {
+    border-color: var(--accent-primary);
+    background-color: rgba(0, 230, 118, 0.1);
+}
+
+.file-prompt-content {
+    text-align: center;
+    color: var(--text-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    pointer-events: none; /* Make text non-interactive */
+}
+
+.file-prompt-content svg {
+    width: 40px;
+    height: 40px;
+    color: var(--accent-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.file-prompt-content span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.file-prompt-content .file-types {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+/* ------------------------------------------- */
+
+.analyze-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--background-dark);
+  background-color: var(--accent-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-top: 1rem;
+}
+.analyze-button:hover:not(:disabled) {
+  background-color: #00ff84;
+  transform: translateY(-2px);
+}
+.analyze-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.error-message {
+    color: #ff4d4d;
+    text-align: center;
+}
+
+/* Loading Spinner */
+.loading-container {
+    text-align: center;
+    padding: 3rem;
+}
+.spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--accent-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Results Display */
+.results-container {
+    margin-top: 4rem;
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    animation: fadeInResult 0.5s ease-out;
+}
+@keyframes fadeInResult {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.results-container h2 {
+    font-size: 2.5rem;
+    color: var(--accent-secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.feedback-summary {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.results-container h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.feedback-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.feedback-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.feedback-column li {
+    background-color: var(--background-dark);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--accent-primary);
+    line-height: 1.5;
+}
+.feedback-column h3 {
+    color: var(--accent-primary);
+}
+.feedback-column:last-child h3, .feedback-column:last-child li {
+    border-left-color: #ffc107; /* Yellow for suggestions */
+}
+.feedback-column:last-child h3 {
+    color: #ffc107;
+}
+
+.explore-button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--background-dark);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #00ff84;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; max-height: 0; transform: translateY(-10px); }
+    to { opacity: 1; max-height: 100px; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+    .feedback-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.plan-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+.study-plan-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    color: #4facfe;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.study-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.study-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.day-badge {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: #00f2fe;
+    color: #0f172a;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.study-card h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.study-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.study-card li {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.study-card li::before {
+    content: "•";
+    color: #00f2fe;
+    position: absolute;
+    left: 0;
+}
+
+.youtube-link {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff4d4d;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.youtube-link:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff4d4d;
+}
+
+.fade-in {
+    animation: fadeInStudy 0.5s ease-in forwards;
+}
+
+@keyframes fadeInStudy {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ──────────────────────────────────────────────
+   AI RESUME SUGGESTIONS PANEL
+────────────────────────────────────────────── */
+.ai-suggestions-panel {
+    margin-top: 4rem;
+    background: linear-gradient(135deg, rgba(130, 88, 220, 0.08) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 1px solid rgba(130, 88, 220, 0.25);
+    border-radius: 20px;
+    padding: 2.5rem;
+    animation: fadeInResult 0.5s ease-out;
+}
+
+.ai-sugg-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ai-sugg-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #8258dc, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.ai-sugg-header p {
+    color: #9090b0;
+    font-size: 0.95rem;
+}
+
+.ai-sugg-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Section Tabs */
+.sugg-section-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sugg-tab {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9090b0;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.sugg-tab:hover {
+    background: rgba(130, 88, 220, 0.12);
+    border-color: rgba(130, 88, 220, 0.4);
+    color: #c4a7ff;
+}
+
+.sugg-tab.active {
+    background: linear-gradient(135deg, rgba(130, 88, 220, 0.3), rgba(0, 212, 255, 0.2));
+    border-color: #8258dc;
+    color: #fff;
+    box-shadow: 0 0 14px rgba(130, 88, 220, 0.3);
+}
+
+/* Context Textarea */
+.sugg-context-input {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-family: inherit;
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    line-height: 1.5;
+}
+
+.sugg-context-input:focus {
+    outline: none;
+    border-color: rgba(130, 88, 220, 0.5);
+    box-shadow: 0 0 12px rgba(130, 88, 220, 0.15);
+}
+
+/* Generate Button */
+.sugg-generate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #8258dc, #3a7bd5);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 20px rgba(130, 88, 220, 0.4);
+    font-family: inherit;
+    width: 100%;
+}
+
+.sugg-generate-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(130, 88, 220, 0.55);
+}
+
+.sugg-generate-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Spinner inside button */
+.sugg-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.sugg-error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Results List */
+.sugg-results {
+    margin-top: 1.5rem;
+    animation: fadeInResult 0.4s ease-out;
+}
+
+.sugg-results-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7070a0;
+    margin-bottom: 1rem;
+}
+
+.sugg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sugg-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    position: relative;
+}
+
+.sugg-item:hover {
+    background: rgba(130, 88, 220, 0.08);
+    border-color: rgba(130, 88, 220, 0.3);
+    transform: translateX(4px);
+}
+
+.sugg-item.copied {
+    background: rgba(0, 230, 118, 0.08);
+    border-color: rgba(0, 230, 118, 0.3);
+}
+
+.sugg-bullet-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.sugg-text {
+    flex: 1;
+    color: #d0d0f0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.sugg-copy-hint {
+    font-size: 0.68rem;
+    color: #5a5a78;
+    white-space: nowrap;
+    align-self: center;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.sugg-item.copied .sugg-copy-hint {
+    color: #00e676;
+    font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .ai-suggestions-panel {
+        padding: 1.5rem 1rem;
+    }
+    .ai-sugg-header h2 {
+        font-size: 1.5rem;
+    }
+    .sugg-tab {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+    .resume-builder-page {
+        padding: 3rem 4%;
+    }
+    .resume-builder-header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+
