@@ -132,29 +132,3 @@ AI-Based-Smart-Career-Guidance-Recruitment-Platform/
 │   └── vite.config.js
 └── docs/                     # Auto-generated PPT & PDF Reports
 ```
-
----
-
-## 👨‍💻 Developer Profile
-
-<div align="center">
-  <img src="https://github.com/Harishganth-0704.png" width="150" height="150" alt="Harish Ganth" style="border-radius: 50%; border: 4px solid #00e676;" />
-  
-  ### Harish Ganth
-  **Full Stack Developer | B.E. CSE (Honors)**
-  
-  [GitHub](https://github.com/Harishganth-0704) | [LinkedIn](https://linkedin.com/in/harishganth07)
-</div>
-
----
-
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
