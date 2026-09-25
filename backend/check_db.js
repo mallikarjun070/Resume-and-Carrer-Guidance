@@ -5,7 +5,7 @@ const path = require('path');
 // Load env vars from backend/.env
 dotenv.config({ path: path.join(__dirname, '.env') });
 
-const Assessment = require('./models/Assessment');
+const Assessment = require('./models/Assessment')
 
 async function checkDatabase() {
     try {
