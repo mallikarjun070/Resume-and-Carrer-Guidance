@@ -101,14 +101,54 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Career journey visualization">
+        <div className="hero-visual" aria-label="Career growth visualization">
           <div className="journey-panel">
-            <div className="journey-glow" />
-            {journeySteps.map((step, index) => (
-              <div className={`journey-node node-${index + 1}`} key={step}>
-                {step}
+            <div className="visual-glow glow-one" />
+            <div className="visual-glow glow-two" />
+
+            <div className="floating-chip chip-a">Student</div>
+            <div className="floating-chip chip-b">Skills</div>
+            <div className="floating-chip chip-c">Resume</div>
+            <div className="floating-chip chip-d">Projects</div>
+            <div className="floating-chip chip-e">Job</div>
+
+            <div className="career-scene">
+              <div className="scene-orbit orbit-one" />
+              <div className="scene-orbit orbit-two" />
+              <div className="ai-core">
+                <span>AI</span>
               </div>
-            ))}
+
+              <div className="person">
+                <div className="head" />
+                <div className="hair" />
+                <div className="torso" />
+                <div className="arm arm-left" />
+                <div className="arm arm-right" />
+                <div className="leg leg-left" />
+                <div className="leg leg-right" />
+              </div>
+
+              <div className="laptop">
+                <div className="screen">
+                  <span className="screen-line short" />
+                  <span className="screen-line medium" />
+                  <span className="screen-line long" />
+                  <span className="screen-line medium" />
+                </div>
+                <div className="keyboard" />
+              </div>
+            </div>
+
+            <div className="career-path">
+              <span>Student</span>
+              <span className="path-arrow">→</span>
+              <span>Skills</span>
+              <span className="path-arrow">→</span>
+              <span>Resume</span>
+              <span className="path-arrow">→</span>
+              <span>Job</span>
+            </div>
           </div>
         </div>
       </section>
