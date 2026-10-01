@@ -204,4 +204,3 @@ Contributions are welcome. If you want to improve the platform, you can:
 ## ✅ Project Status
 
 CareerPilotAI is a functional full-stack career guidance application with a React frontend, Node/Express backend, MongoDB data model, and AI-assisted career tooling for assessment, learning, resume, and interview preparation.
-
